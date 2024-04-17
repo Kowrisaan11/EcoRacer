@@ -1,0 +1,93 @@
+/* Define the animation */
+@keyframes headingEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Global styles */
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bold-label {
+  font-weight: bold;
+}
+
+.Menu, .Quiz, .EndScreen {
+  width: 500px;
+  height: 600px;
+  border-radius: 10px;
+  background-color: #0091ff; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Menu input, button, .EndScreen button {
+  width: 400px;
+  height: 50px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: #000000; 
+  color: white; 
+  box-shadow: 0 5px #333; 
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover, .EndScreen button:hover {
+  background-color: #111; 
+  box-shadow: 0 3px #333; 
+}
+
+button:active, .EndScreen button:active {
+  background-color: #222;
+  box-shadow: 0 1px #333; 
+}
+
+.Menu, .Quiz, .EndScreen h1, .Quiz h2 {
+  color: #000000;
+}
+
+h3 {
+  color: #000000; 
+}
+
+#nextQuestion {
+  width: 200px;
+  background-color: #000080;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* Feedback styles */
+.feedback p.skipped, .feedback p.incorrect {
+  color: red; /* Color for skipped and incorrect feedback */
+}
+
+.feedback p.correct {
+  color: blue; /* Color for correct feedback */
+}
+
+/* Heading animation */
+.heading {
+  font-size: 36px;
+  color:  #000000; 
+  animation: headingEffect 3s infinite; /* Apply the animation infinitely */
+}
