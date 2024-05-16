@@ -1,0 +1,15 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+package com.ecoRacer.quizApp.service;
+
+import com.ecoRacer.quizApp.model.User;
+import java.util.List;
+
+public interface UserService {
+    User saveUser(User user);
+
+    List<User> getAllUsers();
+}
