@@ -1,0 +1,29 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+package com.ecoRacer.quizApp.service;
+
+import com.ecoRacer.quizApp.model.User;
+import com.ecoRacer.quizApp.repository.UserRepository;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class UserServiceImplementation implements UserService {
+    @Autowired
+    private UserRepository userRepository;
+
+    public UserServiceImplementation() {
+    }
+
+    public User saveUser(User user) {
+        return (User)this.userRepository.save(user);
+    }
+
+    public List<User> getAllUsers() {
+        return this.userRepository.findAll();
+    }
+}
