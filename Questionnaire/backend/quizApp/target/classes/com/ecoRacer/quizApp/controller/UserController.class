@@ -1,0 +1,39 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+package com.ecoRacer.quizApp.controller;
+
+import com.ecoRacer.quizApp.model.User;
+import com.ecoRacer.quizApp.service.UserService;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping({"/user"})
+@CrossOrigin
+public class UserController {
+    @Autowired
+    private UserService userService;
+
+    public UserController() {
+    }
+
+    @PostMapping({"/add"})
+    public String add(@RequestBody User user) {
+        this.userService.saveUser(user);
+        return "New user is added";
+    }
+
+    @GetMapping({"/getAll"})
+    public List<User> getAllUsers() {
+        return this.userService.getAllUsers();
+    }
+}
