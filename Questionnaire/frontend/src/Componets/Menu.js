@@ -30,7 +30,7 @@ function Menu() {
       <label htmlFor="name" className="bold-label">Enter Your Name:</label>
       <input
         type="text"
-        placeholder="Ex. Harry Potter"
+        placeholder="User Name"
         value={userNameInput} // Bind input value to state
         onChange={(event) => {
           setUserNameInput(event.target.value);
