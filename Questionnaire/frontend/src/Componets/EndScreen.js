@@ -25,12 +25,6 @@ const EndScreen = () => {
     }
   }, [location.state]);
 
-  const restartQuiz = () => {
-    setScore(0);
-    setGameState("menu");
-    navigate("/", { state: { totalAttempts: totalAttempts + 1 } }); // Update totalAttempts in location state
-  };
-
   const totalQuestions = Questions.length;
 
   let resultMessage;
@@ -50,7 +44,6 @@ const EndScreen = () => {
       <p>Total Questions: {totalQuestions}</p>
       <p>Earned Points: {scoreFromLocation}</p>
       <p>Quiz Result: {resultMessage}</p>
-      <button onClick={restartQuiz}>Restart Quiz</button>
     </div>
   );
 };
