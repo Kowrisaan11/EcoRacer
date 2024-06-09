@@ -44,6 +44,7 @@ const EndScreen = () => {
       <p>Total Questions: {totalQuestions}</p>
       <p>Earned Points: {scoreFromLocation}</p>
       <p>Quiz Result: {resultMessage}</p>
+      <h3>Go Back To The Game.</h3>
     </div>
   );
 };
