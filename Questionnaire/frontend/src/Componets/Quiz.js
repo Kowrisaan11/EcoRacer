@@ -43,7 +43,7 @@ function Quiz() {
     }
     const user = {name:userName, score}
     console.log(user)
-    fetch("http://localhost:8080/user/add",{
+    fetch("https://backends-j6al.onrender.com/user/add",{
       method:"POST",
       headers: { "Content-Type": "application/json" },
       body:JSON.stringify(user)
