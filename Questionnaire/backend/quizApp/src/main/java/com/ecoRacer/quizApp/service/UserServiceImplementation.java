@@ -23,5 +23,10 @@ public class UserServiceImplementation implements UserService {
     public List<User> getAllUsers(){
         return userRepository.findAll();
     }
+
+    @Override
+    public User getLastAddedUser() {
+        return userRepository.findTopByOrderByIdDesc();
+    }
 }
 
